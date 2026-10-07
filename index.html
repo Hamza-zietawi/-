@@ -3,7 +3,7 @@
 <head>
 <!-- الحماية الداخلية (CSP وغيرها) مفعّلة داخل هذا الملف. الرؤوس التالية لا يمكن وضعها داخل HTML، فإن كانت استضافتك تدعمها (Netlify أو Cloudflare Pages: ملف _headers، وغيرهما: إعدادات الخادم) أضفها لرفع الحماية، وإن لم تضفها يعمل الموقع بالحماية الداخلية.
 /*
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-g8SeAuSMLm/7m2rNCKJL98D7xuF1PF0doO1vS+8Fibs='; style-src 'sha256-k8yUgkn+0HxiB4GDOFj4bSgFlZtH2gg1CUss0UI73EI=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data:; connect-src https://*.workers.dev https://api.web3forms.com; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-QLQG9rzjMKfhN1WkDFVyCHYkTHdCWnBO1kGvLu5z/v4='; style-src 'sha256-AFr5cKALS7hBQd92zXkIERRRlGwPbQxBdLkoq+JLtWs=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data:; connect-src https://*.workers.dev https://api.web3forms.com; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests; frame-ancestors 'none'
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
@@ -13,11 +13,13 @@
   Cross-Origin-Resource-Policy: same-origin
 -->
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-g8SeAuSMLm/7m2rNCKJL98D7xuF1PF0doO1vS+8Fibs='; style-src 'sha256-k8yUgkn+0HxiB4GDOFj4bSgFlZtH2gg1CUss0UI73EI=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data:; connect-src https://*.workers.dev https://api.web3forms.com; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-QLQG9rzjMKfhN1WkDFVyCHYkTHdCWnBO1kGvLu5z/v4='; style-src 'sha256-AFr5cKALS7hBQd92zXkIERRRlGwPbQxBdLkoq+JLtWs=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data:; connect-src https://*.workers.dev https://api.web3forms.com; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>حمزة الزيتاوي | SEO بالذكاء الاصطناعي في عمّان والأردن</title>
 <meta name="description" content="حمزة الزيتاوي، خبير SEO في عمّان يعمل بالذكاء الاصطناعي: ظهور في جوجل وBing وفي إجابات الذكاء الاصطناعي، بقياس صادق. للشركات والأفراد والوكالات.">
 <meta name="robots" content="index,follow,max-image-preview:large">
+<!-- مفتاح Web3Forms: الصقه في content أدناه (لا يغيّر بصمة السكربت) -->
+<meta name="wf-key" content="">
 <meta name="theme-color" content="#49a1ec">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="format-detection" content="telephone=no,email=no">
@@ -335,6 +337,14 @@ main{padding-bottom:0}
 .by b{font-size:1rem;line-height:1.6}.by span{line-height:1.7}
 @media(max-width:820px){.hero .row .btn{font-size:.8rem;padding:.75em .5em;white-space:nowrap}}
 .logo b{white-space:nowrap}@media(max-width:520px){.hd.sm{width:94vw}.logo b{font-size:.88rem}}
+
+/* v11: merged journey slide, flush closing frame */
+.jt{margin-bottom:14px}.jt button{min-height:44px}.jp{display:grid;gap:14px;margin-top:22px}.jp .jl{color:var(--mut);max-width:38em}
+.jr .ln{font-size:1rem;margin:36px 0 14px}.jr .row.cen{margin-top:26px}
+.js .jr .steps li{opacity:0;transform:translateY(14px)}
+.jr.in .steps li{opacity:1;transform:none;transition:opacity .6s var(--em),transform .75s var(--em);transition-delay:calc(var(--n,0)*90ms + 200ms)}
+.steps li:nth-child(2){--n:1}.steps li:nth-child(3){--n:2}.steps li:nth-child(4){--n:3}
+#contact{border-bottom:0;box-shadow:inset 0 1.5px 0 rgba(255,255,255,.6),0 -22px 50px -24px rgba(10,10,50,.45)}
 </style>
 </head>
 <body>
@@ -351,7 +361,7 @@ main{padding-bottom:0}
 </div>
 <div class="dp" id="dp"><div>
 <nav aria-label="الأقسام">
-<a href="#aq">اسأل عن حالتك</a><a href="#tools">غرفة العمليات</a><a href="#gauge">عدّاد الوعي</a><a href="#start">ابدأ من حيث أنت</a><a href="#value">ماذا تشتري</a><a href="#services">الخدمات</a><a href="#peers">للزملاء والوكالات</a><a href="#method">كيف أعمل</a><a href="#code">ميزان الصنعة</a><a href="#bubbles">الفقاعات</a><a href="#talk">راسلني أو علّق</a><a href="#contact">ابدأ الآن</a>
+<a href="#aq">اسأل عن حالتك</a><a href="#tools">غرفة العمليات</a><a href="#gauge">عدّاد الوعي</a><a href="#journey">ماذا تشتري وكيف أعمل</a><a href="#peers">للزملاء والوكالات</a><a href="#code">ميزان الصنعة</a><a href="#bubbles">الفقاعات</a><a href="#talk">راسلني أو علّق</a><a href="#contact">ابدأ الآن</a>
 </nav>
 <a class="btn p wa-l" target="_blank" rel="noopener noreferrer">ابدأ بتشخيص حضورك</a>
 </div></div>
@@ -384,37 +394,33 @@ main{padding-bottom:0}
 <p class="fn">المتوسط العالمي للإنترنت نحو 6.5 ساعات يوميًا، ولوقت التواصل الاجتماعي قرابة ساعتين ونصف (DataReportal، أرقام تقريبية تختلف بالبلد والعمر). الأيام والسنوات حساب مباشر على ساعاتك، بافتراض 16 ساعة يقظة في اليوم.</p>
 </section>
 
-<section class="sec glass rv" id="start">
-<div class="sh"><h2>ليس عندك موقع؟ ليس هذا عائقًا.</h2><p>كثيرون يبدؤون من حسابات التواصل، وهذه بداية سليمة. لكن الحساب ملك المنصة، وهي تغيّر ما يصل إلى جمهورك متى شاءت. أبدأ معك من حيث أنت، وأبني حضورًا تملكه أنت.</p></div>
-<div class="grid">
-<article class="cd"><h3>عندي حسابات تواصل</h3><p>جمهورك يتابعك، لكن من يبحث عنك في جوجل لا يجد إلا صورًا متفرقة. أحوّل حساباتك إلى حضور يظهر عند البحث، دون أن تترك منصاتك.</p><div class="row"><a class="btn p" data-m="مرحبًا حمزة، عندي حسابات تواصل بدون موقع وأريد أن أعرف من أين أبدأ." target="_blank" rel="noopener noreferrer">ابدأ من حسابي</a></div><div class="dd" data-u="s"></div></article>
-<article class="cd"><h3>عندي نشاط تجاري</h3><p>متجر أو عيادة أو مطعم أو شركة: غالبًا يبحث العميل عنك قبل أن يزورك أو يتصل. أرتّب بطاقتك في الخرائط وصفحاتك ليجدك قبل غيرك.</p><div class="row"><a class="btn p" data-m="مرحبًا حمزة، عندي نشاط تجاري وأريد أن يجدني عملائي في جوجل." target="_blank" rel="noopener noreferrer">ابدأ من نشاطي</a></div><div class="dd" data-u="b"></div></article>
-<article class="cd"><h3>أنا علامة شخصية</h3><p>اسمك هو منتجك. أرتّب ما يظهر حين يُكتب اسمك في جوجل، وأبني صفحة تعرّف بك وتثبت خبرتك قبل أن يتواصل معك أحد.</p><div class="row"><a class="btn p" data-m="مرحبًا حمزة، أنا علامة شخصية وأريد بناء حضور يعرّف بخبرتي." target="_blank" rel="noopener noreferrer">ابدأ من اسمي</a></div><div class="dd" data-u="p"></div></article>
-</div>
-<p class="fn">لا موقع بعد؟ لا مشكلة. أخبرني بما عندك اليوم، وأقول لك من أين نبدأ.</p>
-</section>
-
-<section class="sec glass rv" id="value">
-<div class="sh"><h2>إذن، ما الذي تشتريه مني؟</h2><p>إن كان عميلك يقضي يومه بين الشاشات، فظهورك أمامه ليس رفاهية. لا تشتري صفحات أكثر ولا زيارات للزينة، بل قرارات أوضح ونظامًا يحوّل الظهور إلى طلبات.</p></div>
-<div class="grid">
-<article class="cd"><h3>ظهور حيث يسأل عميلك</h3><p>أبني حضورك في جوجل وBing وفي إجابات الذكاء الاصطناعي، وبالكلمات التي يستخدمها عملاؤك هم لا التي تحبها أنت.</p></article>
-<article class="cd"><h3>محتوى له وظيفة</h3><p>كل صفحة تؤدي مهمة واحدة: تجيب عن سؤال حقيقي، أو تبني ثقة، أو تدفع الزائر إلى خطوته التالية. وما لا وظيفة له لا يُنشر.</p></article>
-<article class="cd"><h3>أرقام تخدم القرار</h3><p>لا أعرض الأرقام لتُعجبك، بل لتقرر بها: أين نزيد الجهد، وأين نتوقف.</p></article>
-</div>
-</section>
-
-<section class="sec glass rv" id="services">
-<div class="sh"><h2>اختر خدماتك وأرسل طلبك</h2><p>أضف ما يناسبك إلى السلة وأرسلها لي على واتساب، وأرد عليك بعرض واضح يناسب حالتك.</p></div>
+<section class="sec glass rv jr" id="journey">
+<div class="sh"><h2>ابدأ من حيث أنت، وانظر ما يناسبك</h2><p>اختر ما يصفك أكثر، فيتغيّر المحتوى والخدمات لتناسب حالتك.</p></div>
+<div class="pk jt" id="jt" role="group" aria-label="ما الذي يصفك؟"><button aria-pressed="true" data-k="s">عندي حسابات تواصل</button><button aria-pressed="false" data-k="b">عندي نشاط تجاري</button><button aria-pressed="false" data-k="p">أنا علامة شخصية</button></div>
+<div class="row"><a class="btn p jcta" target="_blank" rel="noopener noreferrer"></a></div>
+<div class="jp" data-k="s"><p class="jl">حساباتك تجمع جمهورك، لكن من يبحث عنك في جوجل لا يجد إلا صورًا متفرقة. هذا ما تشتريه:</p><div class="grid"><article class="cd"><h3>اسم يُعثر عليه</h3><p>اسم ورابط وبايو موحّدة على كل منصاتك، فيجدك من يبحث عنك.</p></article><article class="cd"><h3>حضور تملكه</h3><p>أحوّل حساباتك إلى حضور يظهر عند البحث دون أن تترك منصاتك.</p></article><article class="cd"><h3>قرارات لا تخمينات</h3><p>أرقام صادقة تقول لك أين نزيد الجهد وأين نتوقف.</p></article></div><div class="dd" data-u="s"></div></div>
+<div class="jp" data-k="b" hidden><p class="jl">غالبًا يبحث العميل عنك قبل أن يزورك أو يتصل. هذا ما تشتريه:</p><div class="grid"><article class="cd"><h3>بطاقة تسبق منافسك</h3><p>أرتّب بطاقتك في الخرائط وصفحاتك ليجدك العميل قبل غيرك.</p></article><article class="cd"><h3>محتوى له وظيفة</h3><p>كل صفحة تجيب عن سؤال حقيقي أو تدفع الزائر إلى الاتصال بك.</p></article><article class="cd"><h3>طلبات لا زيارات للزينة</h3><p>نظام يحوّل الظهور إلى اتصالات وطلبات، وأرقام تثبت ذلك.</p></article></div><div class="dd" data-u="b"></div></div>
+<div class="jp" data-k="p" hidden><p class="jl">اسمك هو منتجك، وما يظهر عنه هو أول ما يحكم به الناس عليك. هذا ما تشتريه:</p><div class="grid"><article class="cd"><h3>أول نتيجة عن اسمك</h3><p>أرتّب ما يظهر حين يُكتب اسمك في جوجل ليخدمك لا ليربكك.</p></article><article class="cd"><h3>صفحة تثبت خبرتك</h3><p>جملة تعريف واضحة ودليل واحد قابل للتحقق يبنيان الثقة.</p></article><article class="cd"><h3>ثقة قبل اللقاء الأول</h3><p>يقتنع من يبحث عنك قبل أن يتواصل، فتبدأ المحادثة من الجدّ.</p></article></div><div class="dd" data-u="p"></div></div>
+<h3 class="ln">الخدمات التي تناسبك: أضف ما تريد إلى السلة وأرسلها على واتساب</h3>
 <div class="grid">
 <article class="cd"><h3>تشخيص حضورك الرقمي</h3><p>أفحص حسابك أو موقعك أو بطاقتك، وأخبرك بما يعطّلك وبما نبدأ به أولًا.</p><div class="row"><button class="btn p add" data-id="audit" data-n="تشخيص حضورك الرقمي" data-p="">أضف إلى السلة</button></div></article>
-<article class="cd"><h3>حضور من حسابات التواصل</h3><p>أحوّل حساباتك إلى حضور يظهر عند البحث دون أن تترك منصاتك.</p><div class="row"><button class="btn p add" data-id="social" data-n="حضور من حسابات التواصل" data-p="">أضف إلى السلة</button></div></article>
-<article class="cd"><h3>نشاطك في الخرائط والبحث</h3><p>أرتّب بطاقتك وصفحاتك ليجدك العميل قبل أن يزورك أو يتصل.</p><div class="row"><button class="btn p add" data-id="local" data-n="نشاطك في الخرائط والبحث" data-p="">أضف إلى السلة</button></div></article>
-<article class="cd"><h3>علامة شخصية باسمك</h3><p>أبني صفحة تعرّف بك وتثبت خبرتك حين يُكتب اسمك في جوجل.</p><div class="row"><button class="btn p add" data-id="brand" data-n="علامة شخصية باسمك" data-p="">أضف إلى السلة</button></div></article>
+<article class="cd" data-for="s"><h3>حضور من حسابات التواصل</h3><p>أحوّل حساباتك إلى حضور يظهر عند البحث دون أن تترك منصاتك.</p><div class="row"><button class="btn p add" data-id="social" data-n="حضور من حسابات التواصل" data-p="">أضف إلى السلة</button></div></article>
+<article class="cd" data-for="b"><h3>نشاطك في الخرائط والبحث</h3><p>أرتّب بطاقتك وصفحاتك ليجدك العميل قبل أن يزورك أو يتصل.</p><div class="row"><button class="btn p add" data-id="local" data-n="نشاطك في الخرائط والبحث" data-p="">أضف إلى السلة</button></div></article>
+<article class="cd" data-for="p"><h3>علامة شخصية باسمك</h3><p>أبني صفحة تعرّف بك وتثبت خبرتك حين يُكتب اسمك في جوجل.</p><div class="row"><button class="btn p add" data-id="brand" data-n="علامة شخصية باسمك" data-p="">أضف إلى السلة</button></div></article>
 <article class="cd"><h3>محتوى SEO له وظيفة</h3><p>صفحات تجيب عن سؤال حقيقي أو تبني ثقة أو تدفع إلى الخطوة التالية.</p><div class="row"><button class="btn p add" data-id="content" data-n="محتوى SEO له وظيفة" data-p="">أضف إلى السلة</button></div></article>
 <article class="cd"><h3>متابعة وقياس شهري</h3><p>أرقام صادقة كل شهر تقرّر بها أين نزيد الجهد وأين نتوقف.</p><div class="row"><button class="btn p add" data-id="report" data-n="متابعة وقياس شهري" data-p="">أضف إلى السلة</button></div></article>
 <article class="cd"><h3>تدقيق ثانٍ أو تنفيذ للوكالات</h3><p>رأي من الخارج أو تنفيذ باسمك بجودتك أنت ووعد مكتوب.</p><div class="row"><button class="btn p add" data-id="peer" data-n="تدقيق ثانٍ أو تنفيذ للوكالات" data-p="">أضف إلى السلة</button></div></article>
 <article class="cd"><h3>الباقة المميزة للمساعد الذكي</h3><p>أسئلة أكثر وإجابات أعمق عن حالتك، بعد انتهاء المحاولات المجانية.</p><div class="row"><button class="btn p add" data-id="ai" data-n="الباقة المميزة للمساعد الذكي" data-p="">أضف إلى السلة</button></div></article>
-</div></section>
+</div>
+<h3 class="ln">كيف أعمل: أربع خطوات، كل واحدة تُبنى على ما قبلها</h3>
+<ol class="steps">
+<li><div><h3>تدقيق</h3><p>أفحص موقعك كما يراه زاحف جوجل، وأحصي كل ما يعطّله.</p></div></li>
+<li><div><h3>فهم الجمهور</h3><p>أحدد الأسئلة التي يبحث عنها الناس، وما وراء كل سؤال من خوف أو حاجة.</p></div></li>
+<li><div><h3>تنفيذ</h3><p>أصلح الأساس التقني أولًا، ثم أبني المحتوى فوقه.</p></div></li>
+<li><div><h3>قياس وتحسين</h3><p>أراجع الأرقام كل شهر وأعدّل بحسب الواقع. أولى الإشارات تظهر خلال أسابيع، والنتائج الثابتة تحتاج أشهرًا، وفق المنافسة وعمر الموقع.</p></div></li>
+</ol>
+<div class="row cen"><a class="btn p big jcta" target="_blank" rel="noopener noreferrer"></a></div>
+</section>
 
 <section class="sec glass rv" id="peers">
 <div class="peer">
@@ -427,15 +433,6 @@ main{padding-bottom:0}
 </div>
 </section>
 
-<section class="sec glass rv" id="method">
-<div class="sh"><h2>كيف أعمل</h2><p>أربع خطوات، كل واحدة تُبنى على ما قبلها.</p></div>
-<ol class="steps">
-<li><div><h3>تدقيق</h3><p>أفحص موقعك كما يراه زاحف جوجل، وأحصي كل ما يعطّله.</p></div></li>
-<li><div><h3>فهم الجمهور</h3><p>أحدد الأسئلة التي يبحث عنها الناس، وما وراء كل سؤال من خوف أو حاجة.</p></div></li>
-<li><div><h3>تنفيذ</h3><p>أصلح الأساس التقني أولًا، ثم أبني المحتوى فوقه.</p></div></li>
-<li><div><h3>قياس وتحسين</h3><p>أراجع الأرقام كل شهر وأعدّل بحسب الواقع. أولى الإشارات تظهر خلال أسابيع، والنتائج الثابتة تحتاج أشهرًا، وفق المنافسة وعمر الموقع.</p></div></li>
-</ol>
-</section>
 
 <section class="sec glass rv" id="code">
 <div class="sh"><h2>ميزان الصنعة: ما أفعله وما أرفضه</h2><p>قواعد لا أتنازل عنها، وهي تتوافق مع سياسات جوجل ضد التلاعب. النزاهة هنا ليست شعارًا، بل أرخص تأمين لموقعك.</p></div>
@@ -477,7 +474,7 @@ main{padding-bottom:0}
 <p>كل ساعة يبحث فيها عميلك ولا يجدك، يجد فيها غيرك. والربع الأخير من 2026 بدأ فعلًا. أرسل لي رابط حسابك أو موقعك الآن، وسأخبرك بما يمنع عملاءك من إيجادك وبما يستحق أن نبدأ به أولًا.</p>
 <a class="btn p big wa-l" target="_blank" rel="noopener noreferrer">أرسل رابط حسابك أو موقعك الآن</a>
 <p class="mini">رسالة واحدة تكفي لنبدأ، حتى لو لم يكن عندك موقع. وسأخبرك بالحقيقة حتى لو لم تكن مريحة.</p>
-<div class="bio"><p>أنا خريج تسويق رقمي من جامعة الزرقاء، بخبرة تتجاوز 10 سنوات في السوق الأردني والعربي. بدأت من المبيعات، فتعلّمت فهم العميل واعتراضه ولحظة قراره قبل أن أتخصص في التسويق الإلكتروني.</p><div class="row cen"><a class="btn" id="em" href="#contact">البريد الإلكتروني</a><a class="btn" id="tl" dir="ltr" href="#contact">اتصال</a></div></div>
+<div class="bio"><p>أنا خريج تسويق رقمي من جامعة الزرقاء، بخبرة تتجاوز 10 سنوات في السوق الأردني والعربي. بدأت من المبيعات، فتعلّمت فهم العميل واعتراضه ولحظة قراره قبل أن أتخصص في التسويق الإلكتروني.</p><div class="row cen"><a class="btn" id="em" href="#contact">البريد الإلكتروني</a><button class="btn" id="tl" type="button" aria-label="نسخ رقم الهاتف بالصيغة الدولية"></button></div></div>
 </section>
 </main>
 <footer class="ft"><svg class="sc2" viewBox="0 0 1200 260" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
@@ -524,7 +521,11 @@ const sb=$('#sn'),sbu=()=>{sb.classList.toggle('off',!SN);sb.setAttribute('aria-
 sb.addEventListener('click',()=>{SN=!SN;ls('hz_sn',SN?1:0);sbu();snd('t',660)});
 new IntersectionObserver(e=>{tv=e[0].isIntersecting}).observe($('.sx'));
 new IntersectionObserver(e=>d.body.classList.toggle('so2',e[0].isIntersecting)).observe($('#contact'));
-{const e=['zietawi.1997','gmail.com'].join('@'),p='0785380583',em=$('#em'),tl=$('#tl');em.href='mailto:'+e;em.textContent=e;tl.href='tel:+962'+p.slice(1);tl.textContent=p;$('#wn').textContent=p}
+{const e=['zietawi.1997','gmail.com'].join('@'),p='0785380583',N='+962785380583',em=$('#em'),tl=$('#tl'),nt=$('#nt'),a=$('#ntt'),b=$('#ntp');let to=0;em.href='mailto:'+e;em.textContent=e;$('#wn').textContent=p;
+const lab=x=>{tl.textContent='';tl.append(x+' ');const n=d.createElement('bdi');n.dir='ltr';n.textContent='+962 7 8538 0583';tl.appendChild(n)};lab('انسخ رقمي');
+const fb=()=>{const x=d.createElement('textarea');x.value=N;x.readOnly=true;x.className='hp';d.body.appendChild(x);x.select();x.setSelectionRange(0,N.length);let ok=false;try{ok=d.execCommand('copy')}catch(r){}x.remove();return ok};
+tl.addEventListener('click',async()=>{let ok=false;try{await navigator.clipboard.writeText(N);ok=true}catch(r){ok=fb()}
+a.textContent=ok?'تم نسخ الرقم ✓':'انسخ الرقم يدويًا';b.textContent=N;nt.classList.add('on');clearTimeout(to);to=setTimeout(()=>nt.classList.remove('on'),3200);if(ok){lab('تم النسخ ✓');snd('ok');setTimeout(()=>lab('انسخ رقمي'),2200)}})}
 const u='https://wa.me/962785380583?text='+encodeURIComponent('مرحبًا حمزة، وصلتُ من صفحتك وأرغب بتشخيص حضوري على الإنترنت.');
 $$('.wa-l').forEach(a=>a.href=u);$$('[data-m]').forEach(a=>a.href='https://wa.me/962785380583?text='+encodeURIComponent(a.dataset.m));
 
@@ -586,7 +587,7 @@ cv.addEventListener('pointerdown',e=>{const[x,y]=pos(e),b=bs.find(b=>Math.hypot(
 const nxt=()=>{const pl=BB.filter(b=>!seen.has(b));show(pl.length?pl[0]:BB[Math.random()*BB.length|0])};$('#nx').addEventListener('click',nxt);$('#nx2').addEventListener('click',nxt);
 const closeS=()=>{$('#bpn').classList.remove('on');d.body.classList.remove('so')};$('#bx2').addEventListener('click',closeS);d.addEventListener('pointerdown',e=>{if(!e.target.closest('#bpn,#cv,#nx,#cart,#cb,#up'))closeS()});d.addEventListener('keydown',e=>{if(e.key==='Escape')closeS()});
 $('#cnt').textContent=`كشفت 0 من ${BB.length}`;
-const CFG={endpoint:'',free:3,price:'',mail:'https://api.web3forms.com/submit',key:''};/* key: مفتاح Web3Forms (web3forms.com) يصل الرسائل إلى بريدك */
+const CFG={endpoint:'',free:3,price:'',mail:'https://api.web3forms.com/submit',key:(($('meta[name=wf-key]')||{}).content||'').trim()};/* key: مفتاح Web3Forms (web3forms.com) يصل الرسائل إلى بريدك */
 const U={
 s:{n:'حسابات التواصل',g:'<svg class="mg" viewBox="0 0 300 120" aria-hidden="true"><rect class="l" x="70" y="22" width="160" height="76" rx="16"/><circle class="f dt d1" cx="105" cy="60" r="10"/><circle class="f dt d2" cx="135" cy="60" r="10"/><circle class="f dt d3" cx="165" cy="60" r="10"/><circle class="f dt d4" cx="195" cy="60" r="10"/></svg>',
 c:['اسم المستخدم واحد على كل المنصات','رابط واحد في البايو يجمع كل شيء','البايو يقول لمن تخدم وبماذا'],
@@ -612,9 +613,14 @@ const b=d.createElement('b');b.textContent=gaps.length?`خطوتك الأولى 
 if(gaps.length){const p=d.createElement('div');p.textContent=u.t[gaps[0]];ot.appendChild(p)}
 const q=d.createElement('q');q.textContent=u.w;ot.appendChild(q);
 const w=d.createElement('div');w.textContent=u.y;ot.appendChild(w);
-const cb=d.createElement('button');cb.className='btn';cb.textContent='انسخ الصياغة';cb.addEventListener('click',()=>{try{navigator.clipboard.writeText(u.w);cb.textContent='تم النسخ'}catch(e){}});ot.appendChild(cb)};
+};
 u.c.forEach((t,i)=>{const bt=d.createElement('button');bt.setAttribute('aria-pressed','false');bt.innerHTML='<i>✓</i>';bt.append(t);bt.addEventListener('click',()=>{st[i]^=1;bt.setAttribute('aria-pressed',!!st[i]);snd('t',500+i*80);draw()});ck.appendChild(bt)});
 draw();tg.addEventListener('click',()=>{const o=!el.classList.contains('open');el.classList.toggle('open',o);tg.setAttribute('aria-expanded',o);snd('t',o?700:560)})})}
+{const jt=$$('#jt button'),jp=$$('.jp'),fo=$$('[data-for]'),ct=$$('.jcta'),T={s:['ابدأ من حسابي','مرحبًا حمزة، عندي حسابات تواصل بدون موقع وأريد أن أعرف من أين أبدأ.'],b:['ابدأ من نشاطي','مرحبًا حمزة، عندي نشاط تجاري وأريد أن يجدني عملائي في جوجل.'],p:['ابدأ من اسمي','مرحبًا حمزة، أنا علامة شخصية وأريد بناء حضور يعرّف بخبرتي.']};
+let K=new URLSearchParams(location.search).get('for')||ls('hz_vt');if(!T[K])K='s';
+const go=(k,an)=>{ls('hz_vt',k);jt.forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===k));jp.forEach(p=>{const on=p.dataset.k===k;p.hidden=!on;if(on&&an){p.classList.remove('sw');void p.offsetWidth;p.classList.add('sw')}});fo.forEach(e=>{const on=e.dataset.for===k;e.hidden=!on;if(on&&an){e.classList.remove('sw');void e.offsetWidth;e.classList.add('sw')}});
+ct.forEach(a=>{a.textContent=T[k][0];a.href='https://wa.me/962785380583?text='+encodeURIComponent(T[k][1])})};
+jt.forEach(b=>b.addEventListener('click',()=>{go(b.dataset.k,1);snd('t',600)}));go(K,0)}
 {const day=()=>new Date().toISOString().slice(0,10),rd=()=>{try{const o=JSON.parse(ls('hz_ai')||'{}');return o.d===day()?o.n:0}catch(e){return 0}},wr=n=>ls('hz_ai',JSON.stringify({d:day(),n}));
 const ab=$('#ab'),ao=$('#ao'),aq=$('#aq'),ar=$('#ar'),rem=()=>Math.max(0,CFG.free-rd());
 const upd=()=>ar.textContent=`محاولاتك المجانية اليوم: ${rem()} من ${CFG.free}`;upd();
@@ -624,7 +630,7 @@ $('#ux').addEventListener('click',cu);d.addEventListener('keydown',e=>{if(e.key=
 const pk=$$('.pk button[data-s]');pk.forEach(b=>b.addEventListener('click',()=>{pk.forEach(x=>x.classList.toggle('on',x===b));aq.value=b.dataset.s;aq.focus();aq.setSelectionRange(aq.value.length,aq.value.length);snd('t',560)}));
 const show=(t,q)=>{ao.textContent=t;if(q){const a=d.createElement('a');a.className='btn p';a.target='_blank';a.rel='noopener noreferrer';a.textContent='نفّذ الخطوة الأولى معي عبر واتساب';a.href='https://wa.me/962785380583?text='+encodeURIComponent('مرحبًا حمزة، وصفتُ حالتي في موقعك وأريد تنفيذ الخطوة الأولى:\n'+q);ao.appendChild(a)}ao.classList.add('on')};
 const local=q=>{if(/وكالة|وكالتي|زميل|عملائي|فريقي/.test(q))return 'تشخيص أولي: حالتك أقرب إلى «شريك لوكالة أو زميل».\nخطوتك الأولى اليوم: اختر موقعًا واحدًا من عملائك وأرسل لي رابطه لنبدأ بتدقيق ثانٍ عليه.\nوبعدها: نقرر معًا إن كان التنفيذ باسمك مناسبًا لحجم عملك.';
-const k=/انستغرام|إنستغرام|فيس|تيك|حساب|متابع/.test(q)?'s':/محل|متجر|عيادة|مطعم|صالون|شركة|خريطة|فرع/.test(q)?'b':'p',u=U[k];return 'تشخيص أولي: حالتك أقرب إلى «'+u.n+'».\nخطوتك الأولى اليوم: '+u.t[0]+'\nصياغة جاهزة تنسخها: '+u.w+'\nوبعدها: أرسل لي النتيجة وأخبرك بالخطوة التالية.'};
+const k=/انستغرام|إنستغرام|فيس|تيك|حساب|متابع/.test(q)?'s':/محل|متجر|عيادة|مطعم|صالون|شركة|خريطة|فرع/.test(q)?'b':'p',u=U[k];return 'تشخيص أولي: حالتك أقرب إلى «'+u.n+'».\nخطوتك الأولى اليوم: '+u.t[0]+'\nصياغة جاهزة لك: '+u.w+'\nوبعدها: أرسل لي النتيجة وأخبرك بالخطوة التالية.'};
 ab.addEventListener('click',async()=>{const q=aq.value.trim();if(q.length<15){show('اكتب حالتك بثلاثة أشياء: ماذا تملك، وماذا تريد، وما الذي يعطّلك.');return}
 if(!rem()){up();return}
 ab.disabled=true;show('أقرأ حالتك...');
