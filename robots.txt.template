@@ -1,0 +1,5 @@
+# After replacing YOUR-DOMAIN.COM with the live domain, publish as /robots.txt
+User-agent: *
+Allow: /
+Disallow: /api/
+Sitemap: https://YOUR-DOMAIN.COM/sitemap.xml

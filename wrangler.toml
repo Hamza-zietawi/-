@@ -1,0 +1,11 @@
+name = "hamza-ai-site"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+[[kv_namespaces]]
+binding = "RATE_LIMIT"
+id = "REPLACE_WITH_YOUR_CLOUDFLARE_KV_NAMESPACE_ID"
+
+[vars]
+CLAUDE_MODEL = "claude-haiku-5-5"
+ALLOWED_ORIGIN = "https://YOUR-DOMAIN.COM"
